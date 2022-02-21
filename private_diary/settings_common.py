@@ -2,6 +2,8 @@ import os
 
 from django.contrib.messages import constants as messages
 
+import django_heroku
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -163,3 +165,6 @@ DEFAULT_FROM_EMAIL = 'admin@example.com'
 # バックアップバッチ用
 BACKUP_PATH = 'backup/'
 NUM_SAVED_BACKUP = 30
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
