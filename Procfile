@@ -1,0 +1,1 @@
+web: gunicorn python private_diary.wsgi
